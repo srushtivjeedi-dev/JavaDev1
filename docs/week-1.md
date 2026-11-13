@@ -14,3 +14,8 @@
 ## Day 2
 - Installed WSL 2 and Docker Desktop 4.99.0 (needed `wsl --install` in an admin PowerShell first)
 - Confirmed the Docker engine is running, ready for Testcontainers
+## Day 2(continued)
+- Added Testcontainers 2.0 (testcontainers-postgresql) to the Spring Boot 4 backend
+- Implemented EnvironmentService with create, list and destroy
+- Exposed REST endpoints: POST/GET /api/environments, DELETE /api/environments/{id}
+- Verified a PostgreSQL container starts and stops on demand (docker ps)
