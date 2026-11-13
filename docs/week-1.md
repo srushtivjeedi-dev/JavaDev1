@@ -11,3 +11,6 @@
 - Merged PR #1 into main
 - Found my Git email was set incorrectly and fixed it so commits link to my GitHub account
 - Learned the dashboard counts only commits with 50+ changed characters
+## Day 2
+- Installed WSL 2 and Docker Desktop 4.99.0 (needed `wsl --install` in an admin PowerShell first)
+- Confirmed the Docker engine is running, ready for Testcontainers
