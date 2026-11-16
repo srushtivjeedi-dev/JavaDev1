@@ -29,6 +29,6 @@ React, Vite, Monaco Editor, Docker
 - [x] Repo setup
 - [x] Spring Boot skeleton
 - [x] Environment endpoints (create / list / destroy)
-- [ ] Seed endpoint
+- [x] Seed endpoint
 - [ ] React + Monaco scaffold
 - [ ] UI connected to backend
