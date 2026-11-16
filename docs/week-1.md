@@ -19,3 +19,8 @@
 - Implemented EnvironmentService with create, list and destroy
 - Exposed REST endpoints: POST/GET /api/environments, DELETE /api/environments/{id}
 - Verified a PostgreSQL container starts and stops on demand (docker ps)
+## Day 3s
+- Added POST /api/environments/{id}/seed to run SQL inside a shadow database
+- Created a sample orders / order_details schema (200 orders) in resources/seed
+- SQL errors are caught and returned as a 400 response with the PostgreSQL message
+- Verified: first seed succeeds, a repeat returns "relation orders already exists"
