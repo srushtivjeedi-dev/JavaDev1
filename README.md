@@ -31,4 +31,5 @@ React, Vite, Monaco Editor, Docker
 - [x] Environment endpoints (create / list / destroy)
 - [x] Seed endpoint
 - [x] React + Monaco scaffold (Vite + React done, Monaco editor next)
+- [x] React + Monaco scaffold (Vite + React done, Monaco SQL editor added, backend wiring next)
 - [ ] UI connected to backend
