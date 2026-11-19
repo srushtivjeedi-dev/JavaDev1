@@ -32,4 +32,4 @@ React, Vite, Monaco Editor, Docker
 - [x] Seed endpoint
 - [x] React + Monaco scaffold (Vite + React done, Monaco editor next)
 - [x] React + Monaco scaffold (Vite + React done, Monaco SQL editor added, backend wiring next)
-- [ ] UI connected to backend
+- [x] UI connected to backend
