@@ -4,9 +4,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-/**
- * Allows the React dev server (localhost:5173) to call the REST API.
- */
+// Lets the React app (port 5173) call the backend (port 8080).
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
