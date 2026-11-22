@@ -16,3 +16,7 @@
 - Added frontend/src/api.js with createEnvironment, listEnvironments, destroyEnvironment and runSql
 - Added a temporary connection check in App.jsx that logs the environment list
 - Verified the page can call GET /api/environments without CORS errors
+## 20 Nov
+- Built EnvironmentPanel (create / refresh / select / destroy) and added selectedId state in App.jsx.
+- Fixed CORS: WebConfig.java was outside src/main/java, so Spring ignored it. Moved it into com.shadowbase.backend.
+- Lesson: file names must match the import and the class name exactly.
