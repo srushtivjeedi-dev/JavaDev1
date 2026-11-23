@@ -20,3 +20,12 @@
 - Built EnvironmentPanel (create / refresh / select / destroy) and added selectedId state in App.jsx.
 - Fixed CORS: WebConfig.java was outside src/main/java, so Spring ignored it. Moved it into com.shadowbase.backend.
 - Lesson: file names must match the import and the class name exactly.
+## 20 Nov
+- Built EnvironmentPanel (create / refresh / select / destroy) and added selectedId state in App.jsx.
+- Fixed CORS: WebConfig.java was outside src/main/java, so Spring ignored it. Moved it into com.shadowbase.backend.
+
+## 22 Nov
+- Wired the Run button to the backend (runSql) and added a result panel that shows success or the PostgreSQL error.
+
+## 23 Nov
+- Added infra/docker-compose.yml with a source PostgreSQL (wal_level=logical) as the first CDC step.
