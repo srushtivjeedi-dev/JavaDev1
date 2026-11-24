@@ -29,3 +29,8 @@
 
 ## 23 Nov
 - Added infra/docker-compose.yml with a source PostgreSQL (wal_level=logical) as the first CDC step.
+
+## 24 Nov
+- Fixed the Run button: App.jsx now passes selectedId to SqlEditor (the id was not being passed, so Run always said "Select an environment first").
+- Added validation to the /seed endpoint: blank SQL now returns 400 "SQL must not be empty." instead of silently loading the sample schema. A missing body still loads the sample schema.
+- Tested: starter script shows a red error about orders, CREATE TABLE demo shows green Success, and an empty editor shows a red "SQL must not be empty."
