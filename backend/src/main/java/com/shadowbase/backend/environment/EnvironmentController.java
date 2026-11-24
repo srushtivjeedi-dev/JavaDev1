@@ -34,15 +34,26 @@ public class EnvironmentController {
         return service.list();
     }
 
-    /** Seed an environment. No body = sample schema; body {"sql": "..."} = custom SQL. */
+    /**
+     * Seed an environment. No SQL sent = sample schema; {"sql": "..."} = custom SQL;
+     * blank SQL = 400.
+     */
     @PostMapping("/{id}/seed")
     public ResponseEntity<ScriptResult> seed(
             @PathVariable String id,
             @RequestBody(required = false) ScriptRequest request) {
 
-        String sql = (request == null || request.sql() == null || request.sql().isBlank())
-                ? service.sampleSchema()
-                : request.sql();
+        String sql;
+        if (request == null || request.sql() == null) {
+            // No SQL sent at all: load the sample schema
+            sql = service.sampleSchema();
+        } else if (request.sql().isBlank()) {
+            // SQL was sent but it is empty or only spaces: reject it
+            return ResponseEntity.badRequest()
+                    .body(new ScriptResult(false, "SQL must not be empty."));
+        } else {
+            sql = request.sql();
+        }
 
         ScriptResult result = service.runScript(id, sql);
         if (result == null) {
