@@ -16,7 +16,7 @@ function App() {
         onSelect={setSelectedId}
       />
 
-      <SqlEditor />
+      <SqlEditor selectedId={selectedId} />
     </div>
   );
 }
